@@ -1,0 +1,25 @@
+apiVersion: v1
+stringData:
+    CF_API_EMAIL: ENC[AES256_GCM,data:PXQlJJldQGk7iabemBraK6s4JnbA8amCig==,iv:Wd6lb0R3ClWK7933uoau221/e9NcakHQwkFLB79xGrs=,tag:GcLJ17HkdNVRECnlKx0cKw==,type:str]
+    CF_API_KEY: ENC[AES256_GCM,data:HMJgXBJdQstIzcw+3+LLqBYjdtv14jF7vjZmAHRsHdSAXJ7sFQ==,iv:h45POJb9gKICo0fUSSOYjURJkeag119iRzjR/VfJC38=,tag:Jm2N2eZVXSk+nBBtzaT8tA==,type:str]
+kind: Secret
+metadata:
+    annotations:
+        argocd.argoproj.io/sync-wave: "-3"
+    name: cloudflare-api-key
+    namespace: traefik
+type: Opaque
+sops:
+    kms: []
+    gcp_kms:
+        - resource_id: redacted
+          created_at: "2022-01-25T22:11:11Z"
+          enc: redacted
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2022-01-25T22:11:13Z"
+    mac: redacted
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
